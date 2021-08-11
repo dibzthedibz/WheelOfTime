@@ -1,27 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WheelOfTime.WebApp.Data
+namespace WheelOfTime.WebApp.Models.NationMods
 {
-    public class Nation
+    public class NationDetail
     {
-        [Key]
         public int NationId { get; set; }
-        [Required]
-        public Guid OwnerId { get; set; }
-
-        [Required]
+        [Display(Name = "Name Of Nation")]
         public string NationName { get; set; }
-
-        [Required]
         public string Terrain { get; set; }
-
         public string Trades { get; set; }
-
-        public virtual List<Character> Characters { get; set; }
         public virtual List<Chapter> Chapters { get; set; }
+        public virtual List<CharacterListItem> Characters { get; set; }
     }
 }

@@ -1,21 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using WheelOfTime.WebApp.Data;
 using WheelOfTime.WebApp.Models.BookMods;
 using WheelOfTime.WebApp.Models.ChapterMods;
 
-namespace WheelOfTime.Service
+namespace WheelOfTime.WebApp.Data
 {
-    public class BookService
+    public class BooksRepository : IBooks
     {
-
-        //private ApplicationDbContext _db = new ApplicationDbContext();
-
         private readonly Guid _userId;
-        public BookService(Guid userId)
+        public BooksRepository(Guid userId)
         {
             _userId = userId;
         }

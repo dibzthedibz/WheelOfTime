@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using WheelOfTime.WebApp.Data;
 using WheelOfTime.WebApp.Models.CharacterMods;
 using WheelOfTime.WebApp.Models.NationMods;
 
-namespace WheelOfTime.Service
+namespace WheelOfTime.WebApp.Data
 {
-    public class NationService
+    public class NationsRepository
     {
         private readonly Guid _userId;
-        public NationService(Guid userId)
+        public NationsRepository(Guid userId)
         {
             _userId = userId;
         }

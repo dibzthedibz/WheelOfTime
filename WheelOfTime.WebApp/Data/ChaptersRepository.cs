@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using WheelOfTime.WebApp.Data;
 using WheelOfTime.WebApp.Models.ChapterMods;
 
-namespace WheelOfTime.Service
+namespace WheelOfTime.WebApp.Data
 {
-    public class ChapterService
+    public class ChaptersRepository : IChapters
     {
-        
-
         private readonly Guid _userId;
-        public ChapterService(Guid userId)
+        public ChaptersRepository(Guid userId)
         {
             _userId = userId;
         }

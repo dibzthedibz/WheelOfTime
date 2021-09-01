@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using WheelOfTime.WebApp.Data;
 using WheelOfTime.WebApp.Models.CharacterMods;
 
-namespace WheelOfTime.Service
+namespace WheelOfTime.WebApp.Data
 {
-    public class CharacterService
+    public class CharactersRepository : ICharacters
     {
         private readonly Guid _userId;
-        public CharacterService(Guid userId)
+        public CharactersRepository(Guid userId)
         {
             _userId = userId;
         }
